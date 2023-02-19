@@ -4,5 +4,3 @@ d = datetime.date.today()
 delta = datetime.timedelta(days = 5)
 print(d - delta)
 
-b_day = datetime.date(2023, 3, 13)
-print(b_day - d)
