@@ -1,8 +1,8 @@
 import re
 text = input()
-x = re.split('_', text)
+pattern = re.compile(r'[A-Z][^A-Z]*')
 
-res = ''
-for i in x:
-    res += i.capitalize()
-print(res)
+matches = pattern.finditer(text)
+
+for match in matches:
+    print(match)
