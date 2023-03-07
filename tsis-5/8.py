@@ -1,9 +1,7 @@
 import re
 text = input()
-pattern = re.compile(r'[A-Z]')
+pattern = re.compile(r'[A-Z][^A-Z]')
 
-x = re.split(pattern, text)
-res = x[0]
-for i in x:
-    res+=i
-print(res)
+x = re.findall(pattern, text)
+for match in x:
+    print(match, end = ' ')
