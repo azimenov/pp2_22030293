@@ -41,7 +41,7 @@ avno;ndsf;vsdib
 sent = 'Start a sent and bring it to an end'
 
 
-pattern = re.compile(r'a.+b')
+pattern = re.compile(r'a.+b$')
 matches = pattern.finditer(text_to_search)
 
 for match in matches:
