@@ -1,6 +1,6 @@
 import re
-def task1(text):
-    pattern = 'ab*'
-    x = re.search(pattern, text)
-    print(x.start())
-
+text_to_search = input()
+pattern = re.compile(r'ab*')
+matches = pattern.finditer(text_to_search)
+for match in matches:
+    print(match)
